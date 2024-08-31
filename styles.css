@@ -1,0 +1,457 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0000;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(to bottom, #000000, #090016);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .logo {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.header-buttons {
+    align-items: left;
+    display: flex;
+    justify-content: left;
+    margin-left: auto;
+}
+
+.header-buttons .btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.header-buttons .btn-primary {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.header-buttons .btn-primary:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.header-buttons .btn-secondary {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.header-buttons .btn-secondary:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.center-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.center-buttons .btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.center-buttons .btn-primary {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.center-buttons .btn-primary:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.center-buttons .btn-secondary {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.center-buttons .btn-secondary:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #090016, #000000);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ffffff, #888888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.hero .btn {
+    padding: 15px 30px;
+    margin: 10px;
+}
+
+.features {
+    padding: 50px 0;
+    background-color: #000000;
+}
+
+.features h2 {
+    text-align: center;
+    
+    margin-bottom: 40px;
+    background: linear-gradient(to right, #ffffff, #888888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+}
+
+.features-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 80%;
+    
+    padding: 20px;
+    z-index: 1; /* Ensure content is above the background */
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgb(132, 0, 255), rgb(255, 255, 255));
+    filter: blur(45px);
+    width: 100px;
+    height: 100px;
+    animation: blobMovement 20s infinite alternate;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.blob:nth-child(2n) {
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.3), rgba(255, 255, 255, 0.3));
+}
+
+@keyframes blobMovement {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100px, 100px);
+    }
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+    width: 40%;
+}
+
+.feature {
+    background: linear-gradient(135deg, #0d0015d2 25%, #000000cf 75%);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.feature:hover {
+    transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.feature h3 {
+    
+    margin-top: 0;
+    background: linear-gradient(to right, #ffffff, #888888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.feature p {
+    margin-top: 10px;
+    
+}
+
+.feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(4, 0, 39, 0.01) 0%, rgba(255, 255, 255, 0) 60%);
+    transform: skewX();
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 10px; /* Match the border-radius of the feature box */
+}
+
+.feature:hover::before {
+    
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
+}
+
+.screenshot {
+    perspective: 1000px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.screenshot-img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s, box-shadow 0.5s, border 0.5s;
+    border: 5px solid rgba(255, 255, 255, 0.1); /* Initial glowing border */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.screenshot-img:hover {
+    transform: rotateY(20deg) rotateX(10deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+@keyframes shine {
+    from {
+        background-position: -100%;
+    }
+    to {
+        background-position: 100%;
+    }
+}
+
+.screenshot-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.1) 100%);
+    background-size: 200% 100%;
+    z-index: 1;
+
+    
+}
+
+.screenshot-img:hover::after {
+
+    animation: shine 0.75s;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #000000;
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically within the viewport */
+}
+.ad-container {
+    position: relative;
+    width: 728px;
+    height: 90px;
+}
+.ad-container a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.btn-primary {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.sunrays-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.sunrays-button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent 50%, rgba(255, 255, 255, 0.2) 60%);
+    opacity: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: opacity 0.5s, transform 0.5s;
+    pointer-events: none;
+}
+
+.sunrays-button:hover:before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Optional: adding a rotating animation for the sunrays */
+@keyframes sunrays-rotate {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+}
+
+.sunrays-button:hover:before {
+    animation: sunrays-rotate 2s linear infinite;
+}
+
+
+/*
+     FILE ARCHIVED ON 01:51:06 Aug 02, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:33:47 Aug 08, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.588
+  exclusion.robots: 0.031
+  exclusion.robots.policy: 0.018
+  esindex: 0.011
+  cdx.remote: 6.116
+  LoadShardBlock: 78.236 (3)
+  PetaboxLoader3.datanode: 92.336 (4)
+  load_resource: 297.247
+  PetaboxLoader3.resolve: 35.677
+*/
